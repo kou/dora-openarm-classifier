@@ -153,7 +153,7 @@ def main():
         if event["id"] == "position":
             last_pos = event["value"].to_numpy(zero_copy_only=False)
             last_right_pos = last_pos[:8]
-            last_left_pos = last_pos[9:]
+            last_left_pos = last_pos[8:]
             continue
 
         if event["id"] == "position_right":
