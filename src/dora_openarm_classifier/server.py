@@ -94,7 +94,7 @@ def main():
         scorer = TOPRewardScorer()
     print("Ready!", flush=True)
 
-    config = uvicorn.Config(app, port=args.port, log_level="info")
+    config = uvicorn.Config(app, host=args.host, port=args.port, log_level="info")
     server = uvicorn.Server(config)
 
     server.run()
